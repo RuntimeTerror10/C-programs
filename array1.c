@@ -2,23 +2,30 @@
 #include <stdlib.h>
 
 int main(){
+    int i,j;
 
-    char art[4][4] ={
+    int art[4][4] ={
 
-                    {'*','*','*','*'},
-                    {'*',' ',' ','*'},
-                    {'*',' ',' ','*'},
-                    {'*','*','*','*'}
+                    {1,1,1,1},
+                    {1,0,0,1},
+                    {1,0,0,1},
+                    {1,1,1,1}
 
                     };
-    for(int i=0;i<4;i++){
-        for(int j=0;j<4;j++)
-        {   printf("%c",art[i][j]);
+
+
+    for(i=0;i<4;i++){
+        for(j=0;j<4;j++)
+        {
+            if(art[i][j]==1)
+                printf("%c",art[i][j]='*');
+            else
+                printf("%c",art[i][j]=' ');
 
         }
-        printf("\n");
+                printf("\n");
 
-        }
+                    }
 
     return 0;
 }
