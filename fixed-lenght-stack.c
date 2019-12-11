@@ -2,28 +2,26 @@
 #include <stdlib.h>
 
 int main(){
-    int arr[10];
-    int i,n,j,c;
-    printf("Enter elements\n");
+    char arr[10]={'0','1','2','3','4','5','6','7','8','9'};
+    int i,c;
+    char ch,num;
     for(i=0;i<10;i++){
-        scanf("%d",&arr[i]);
+        printf("%c |",arr[i]);
     }
+
     printf("\n");
-    for(i=0;i<10;i++){
-        printf("%d |",arr[i]);
-    }
-    printf("\n");
+
     for(j=0;;j++){
-        printf("\nenter new element :");
-        scanf("%d",&n);
-    for (c = 0; c < 9; c++){
-        arr[c] = arr[c+1];
+        for (c = 0; c < 9; c++){
+            arr[c] = arr[c+1];
+        }
+        num=getch();
+        arr[9]=num;
+        system("cls");
+        printf("Resultant array:\n");
+        for (c = 0; c < 10; c++)
+            printf("%c |",arr[c]);
     }
-    arr[9]=n;
-    system("cls");
-    printf("Resultant array:\n");
-    for (c = 0; c < 10; c++)
-         printf("%d |", arr[c]);
-    }
+
     return 0;
 }
